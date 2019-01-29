@@ -2,3 +2,23 @@ https://www.learnopencv.com/color-spaces-in-opencv-cpp-python/
 # I want to figure out how to do the color picker thingy from this article
 
 https://www.pyimagesearch.com/2014/08/04/opencv-python-color-detection/
+
+Homemade Lidar
+https://www.youtube.com/watch?v=Y3Gz0CuwMG4
+
+Mon Jan 28th 2019
+Got the python module to read from camera, also got sliders working so that I could fine tune HSV filters.
+Maybe I can set it up to have an export button where it will just poop the values into a config file that I can then use to read into python and calibrate the laser
+
+Found out that laser shows up as white on a white background if you're too close
+If you shine against a black background then it's easier to filter. 
+If you put a lens to filter the bright light out (lens over camera) then it's also easier to filter.
+
+
+
+TODO: 
+
+    - Figure out how to do the math involved with the range detection thingy
+    - Figure out how I can get angle values from my phones gyro into the computer (for doing math thingys)
+
+
