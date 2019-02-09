@@ -6,6 +6,21 @@ https://www.pyimagesearch.com/2014/08/04/opencv-python-color-detection/
 Homemade Lidar
 https://www.youtube.com/watch?v=Y3Gz0CuwMG4
 
+Lidar, description of lidar distance scanner
+https://hackaday.com/2016/06/05/in-soviet-russia-diy-laser-rangefinder-scan-you/ - READ
+https://habr.com/en/post/393685/ - READ
+https://sites.google.com/site/todddanko/home/webcam_laser_ranger
+https://github.com/iliasam/OpenSimpleLidar
+
+
+Raspbery pi at Huge FPS 
+https://www.raspberrypi.org/forums/viewtopic.php?f=63&t=109523&start=25#p1246776
+https://www.raspberrypi.org/forums/viewtopic.php?f=43&t=109137&p=1307795#p1307795
+
+
+
+GO THROUGH THIS!!!! - https://sites.google.com/site/todddanko/home/webcam_laser_ranger 
+
 Mon Jan 28th 2019
 Got the python module to read from camera, also got sliders working so that I could fine tune HSV filters.
 Maybe I can set it up to have an export button where it will just poop the values into a config file that I can then use to read into python and calibrate the laser
@@ -20,5 +35,5 @@ TODO:
 
     - Figure out how to do the math involved with the range detection thingy
     - Figure out how I can get angle values from my phones gyro into the computer (for doing math thingys)
-
+    - Figure out how to do the detection of 
 

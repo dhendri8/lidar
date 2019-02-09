@@ -4,7 +4,7 @@ import numpy as np
 def callback(x):
     pass
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 cv2.namedWindow('image')
 
 ilowH = 0
@@ -45,8 +45,40 @@ while(True):
 
     frame = cv2.bitwise_and(frame, frame, mask=mask)
 
-    smallFrame = cv2.resize(frame, (0,0), fx=0.75, fy=0.75) 
-    cv2.imshow('image', smallFrame)
+    smallFrame = cv2.resize(frame, (0,0), fx=0.5, fy=0.5) 
+    rotated = cv2.rotate(smallFrame, cv2.ROTATE_90_COUNTERCLOCKWISE)
+    rows_max = rotated.shape[0]
+    cols_max = rotated.shape[1]
+
+    # print (str(rows_max))
+    # print (rotated.shape)
+    result = rotated[200:rows_max-200, 0:cols_max]
+    rows_max = result.shape[0]
+    cols_max = result.shape[1]
+
+    # Trying to find brightest location on screen
+    gray_trimmed = cv2.cvtColor(result, cv2.COLOR_BGR2GRAY)
+    
+
+    radius = 41
+    new_gray = cv2.GaussianBlur(gray_trimmed, (radius, radius), 0)
+    (minVal, maxVal, minLoc, maxLoc) = cv2.minMaxLoc(new_gray)
+    cv2.circle(result, maxLoc, radius, (255, 0, 0), 2)
+    print (maxLoc)
+
+    brightest_row = maxLoc[0]
+    brightest_col = maxLoc[1]
+    # break
+
+    # cv2::rotate(image, image, cv::ROTATE_90_CLOCKWISE);
+
+    # result = result[brightest_row-30:brightest_row+30, 0:cols_max]
+
+    crosshair_size = 10
+    cv2.line(result,(int(cols_max/2),int((rows_max/2)-crosshair_size)),(int(cols_max/2),int((rows_max/2)+crosshair_size)),(255,255,255),1)
+    cv2.line(result,(int((cols_max/2)-crosshair_size),int(rows_max/2)),(int((cols_max/2)+crosshair_size),int(rows_max/2)),(255,255,255),1)
+
+    cv2.imshow('image', result)
 
     k = cv2.waitKey(5) & 0xFF
     if k == 27:
