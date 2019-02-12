@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+from datetime import datetime, date, time
 
 def callback(x):
     pass
@@ -64,7 +65,7 @@ while(True):
     new_gray = cv2.GaussianBlur(gray_trimmed, (radius, radius), 0)
     (minVal, maxVal, minLoc, maxLoc) = cv2.minMaxLoc(new_gray)
     cv2.circle(result, maxLoc, radius, (255, 0, 0), 2)
-    print (maxLoc)
+    # print (maxLoc)
 
     brightest_row = maxLoc[0]
     brightest_col = maxLoc[1]
@@ -80,8 +81,18 @@ while(True):
 
     cv2.imshow('image', result)
 
-    k = cv2.waitKey(5) & 0xFF
-    if k == 27:
+
+    k = cv2.waitKey(5)
+    if k == ord(' '):
+        nowTime = datetime.now().strftime("%Y-%m-%dT%H-%M-%S")
+        filename = str(nowTime)  + ".jpg"
+        filepath = "output_pics/" + filename
+        cv2.imwrite(filepath, result)
+        print("Take picture!!! -> " + filename)
+
+    # http://www.asciitable.com
+    elif k == 27:
+        print("pressed key: [" + str(k) +"]")
         break
 
 

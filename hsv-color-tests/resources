@@ -17,8 +17,6 @@ Raspbery pi at Huge FPS
 https://www.raspberrypi.org/forums/viewtopic.php?f=63&t=109523&start=25#p1246776
 https://www.raspberrypi.org/forums/viewtopic.php?f=43&t=109137&p=1307795#p1307795
 
-
-
 GO THROUGH THIS!!!! - https://sites.google.com/site/todddanko/home/webcam_laser_ranger 
 
 Mon Jan 28th 2019
@@ -29,11 +27,5 @@ Found out that laser shows up as white on a white background if you're too close
 If you shine against a black background then it's easier to filter. 
 If you put a lens to filter the bright light out (lens over camera) then it's also easier to filter.
 
-
-
-TODO: 
-
-    - Figure out how to do the math involved with the range detection thingy
-    - Figure out how I can get angle values from my phones gyro into the computer (for doing math thingys)
-    - Figure out how to do the detection of 
-
+Mon Feb 11th 2019
+Set the camera up to take pictures on space press, took about 9 pics at 2" increments along a yardstick from 14 inches on to 32
