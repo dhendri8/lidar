@@ -20,8 +20,8 @@ def mse(imageA, imageB):
 @func_set_timeout(1)
 def compare_images():
 	count=0
+	image1 = cv2.imread("smaller_sample_images/2019-04-05T19-05-43.jpg")
 	while True: 
-		image1 = cv2.imread("smaller_sample_images/2019-04-05T19-05-43.jpg")
 		image2 = cv2.imread("smaller_sample_images/2019-04-05T19-05-49.jpg")
 
 		print (mse(image1, image2))
