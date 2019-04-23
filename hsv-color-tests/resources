@@ -19,6 +19,8 @@ https://www.raspberrypi.org/forums/viewtopic.php?f=43&t=109137&p=1307795#p130779
 
 GO THROUGH THIS!!!! - https://sites.google.com/site/todddanko/home/webcam_laser_ranger 
 
+Found more info on the raspiraw thingy - https://stamm-wilbrandt.de/en/Raspberry_camera.html#raspiraw
+
 Mon Jan 28th 2019
 Got the python module to read from camera, also got sliders working so that I could fine tune HSV filters.
 Maybe I can set it up to have an export button where it will just poop the values into a config file that I can then use to read into python and calibrate the laser
