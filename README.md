@@ -1,12 +1,15 @@
 # lidar
 
+**GET TO A WORKING MODEL FIRST - THEN OPTIMIZE**
 
 ## Current Rabbit hole
 
 - PNG is supposed to be really small if there are lines with only black.
     - Rob said a few bytes if its a pure black image. 
     - Trying to validate this. 
-
+    - Note: this may be useless if we can't quickly convert raw to png
+    - Idea to chase: Apply mask, convert to png, send resulting data. 
+    - Research PNG compression, different compression speeds may impact performance
 
 ## MUST DO SOMETIME IN THE NEAR FUTURE
 1. Figure out how to run the high speed raspiraw thingy
