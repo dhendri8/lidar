@@ -1,6 +1,19 @@
 # lidar
 
-TODO: 
+
+## Current Rabbit hole
+
+- PNG is supposed to be really small if there are lines with only black.
+    - Rob said a few bytes if its a pure black image. 
+    - Trying to validate this. 
+
+
+## MUST DO SOMETIME IN THE NEAR FUTURE
+1. Figure out how to run the high speed raspiraw thingy
+1. Implement a simple version of that guys Laser range finder / scanner dealydoo 
+
+
+## TODO: 
 - ~Figure out how to do the math involved with the range detection thingy~
 - figure out how to do the angle detection from this site https://sites.google.com/site/todddanko/home/webcam_laser_ranger 
 - Figure out how I can get angle values from my phones gyro into the computer (for doing math thingys)
